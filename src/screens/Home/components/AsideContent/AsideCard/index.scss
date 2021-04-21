@@ -1,0 +1,84 @@
+@import "../../../../../styles";
+
+.aside-card {
+	width: 100%;
+	padding: 5em 3.5em; 
+	display: flex;
+
+	.container-text-card {
+		max-width: 500px;
+
+		.main-word , .aside-title {
+			color: #fff;
+		}
+
+		.main-word {
+			.word { 
+				text-transform: uppercase;
+				font-size: .8em; 
+			}
+		}
+	
+		.aside-title {
+			padding: 2.5em 0;
+			.title {
+				font-size: 2.5em;
+				font-weight: 900;
+			}
+		}
+	
+		.aside-button .button{
+			width: 160px;
+			padding: .5em 0;
+			color: #fff;
+			background: none;
+			border: 1px solid #fff;
+			font-weight: bold;
+			font-size: 16px;
+			transition: .3s;
+
+			&:hover {
+				background-color: #fff;
+				color: var(--color-base);
+			}
+		}
+	}
+
+	&.start {
+		justify-content: flex-start;
+	}
+
+	&.center {
+		justify-content: center;
+	}
+
+	&.end {
+		justify-content: flex-end;
+	}
+
+	&:nth-child(1){
+		background-color: rgb(20,20,20);
+	}
+
+	&:nth-child(2) {
+		background-color: #0F56BF;
+	}
+
+	@include max-width($media-desktop-medium){
+		&.end {
+			justify-content: flex-start;
+		}
+
+		.container-text-card{
+			font-size: .9em;
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		padding: 4em 3em; 
+
+		.container-text-card{
+			font-size: .8em;
+		}
+	}
+}

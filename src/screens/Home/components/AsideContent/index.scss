@@ -1,0 +1,11 @@
+@import "../../../../styles";
+
+.aside-content-home {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	@include max-width($media-desktop-medium){
+		grid-template-columns: 1fr;
+	}
+}

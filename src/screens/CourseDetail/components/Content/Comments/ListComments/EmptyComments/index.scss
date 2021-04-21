@@ -1,0 +1,18 @@
+.course-empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	box-shadow: 0 10px 30px rgba(0,0,0,.09);
+	margin: 1em auto 0;
+	padding: .5in;
+	&__title {
+		font-weight: 900;
+		width: 80%;
+		margin-bottom: 1em;
+	}
+	&__message {
+		color: silver;
+	}
+}

@@ -1,0 +1,45 @@
+@import "../../../styles/index.scss";
+.banner-swipeable {
+	width: 85%;
+	margin: 2em auto;
+	position: relative;
+	@include max-width($media-desktop-small) {
+		display: none;
+	}
+	& .swipeable {
+		display: flex;
+		overflow-x: hidden;
+		& .swipeable-item {
+			height: 300px !important;
+			width: 100%;
+			flex: none;
+			@include flex(none, stretch);
+		}
+	}
+
+	& .button-swipeable {
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 10px;
+		background: none;
+		font-size: 2em;
+		color: white;
+		cursor: pointer;
+		&[class*="prev"] {
+			left: 0;
+		}
+		&[class*="next"] {
+			right: 0;
+		}
+	}
+}
+
+.spacing-skeleton-banner-loading {
+	margin-bottom: 3em;
+
+	@include max-width(800px) {
+		margin-bottom: 1em;
+	}
+}

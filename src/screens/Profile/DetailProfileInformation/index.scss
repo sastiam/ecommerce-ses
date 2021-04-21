@@ -1,0 +1,43 @@
+@import "../../../styles";
+
+.flex-columns {
+	@include flex(none, flex-start);
+	margin: auto;
+	width: 1125px;
+	max-width: 80%;
+	padding: 3em 0;
+	.detail {
+		width: 350px;
+		margin-right: 40px;
+		flex: none;
+	}
+	.main {
+		width: 100%;
+	}
+
+	@include max-width($media-desktop-big) {
+		width: 90%;
+		max-width: none;
+		.detail {
+			width: 38%;
+			margin-right: 0;
+			padding-right: 40px;
+		}
+	}
+
+	@include max-width($media-desktop-medium) {
+		flex-direction: column;
+		margin: auto;
+		max-width: 95%;
+		.detail {
+			width: 100%;
+			flex: 1;
+			padding: 0;
+		}
+	}
+
+	@include max-width($media-mobile-big) {
+		max-width: none;
+		width: 100%;
+	}
+}

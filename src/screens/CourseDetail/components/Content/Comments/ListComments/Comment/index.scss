@@ -1,0 +1,78 @@
+$light-color: rgb(230,230,230);
+
+.comment {
+	padding: 1.5em 0;
+	border-bottom: 1px solid $light-color;
+
+	.content-user-posting {
+		width: 100%;
+		position: relative;
+
+		&,.delete-icon {
+			display: flex;
+			align-items: center;
+		}
+		
+		.image {
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			margin-right: 1em;
+
+			.img {
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				object-fit: cover;
+			}
+		}
+
+		.user {
+			display: grid;
+
+			.username {
+				cursor: pointer;
+				font-size: 16px;
+				font-weight: 700;
+
+				&:hover {
+					color: var(--color-secondary);
+				}
+			}
+			
+			.date {
+				color: rgb(160,160,160);
+				font-size: .7em;
+				font-weight: 500;
+			}
+		}
+
+		.delete-icon {
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			justify-content: center;
+			position: absolute;
+			line-height: 0;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $light-color;
+			}
+		}
+
+	}
+
+	.comment-content {
+		padding: .8em 0;
+		.content {
+			font-weight: 300;
+		}
+	}
+
+	.content-icons {
+		display: flex;
+	}
+}

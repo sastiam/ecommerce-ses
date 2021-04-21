@@ -1,0 +1,25 @@
+@import "../../../../../../../styles";
+
+.courses-message {
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 4em;
+
+	.message-link {
+		width: max-content;
+		margin: 0 auto;
+		@include flex;
+		font-weight: bold;
+		color: var(--color-base);
+		cursor: pointer;
+
+		.icon {
+			font-size: .8em;
+			padding-left: 1em;
+		}
+
+		&:hover{ 
+			text-decoration: underline;
+		}
+	}
+}

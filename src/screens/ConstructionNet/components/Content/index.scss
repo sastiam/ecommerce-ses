@@ -1,0 +1,59 @@
+@import "../../../../styles";
+
+.tutorials {
+	.container-types {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.grid-tutorials{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 2em;
+
+		&.loading {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}	
+
+	@include max-width($media-desktop-big){
+		width: 90% !important;
+	}
+
+	@include max-width($media-desktop-medium){
+		width: 92% !important;
+		padding-bottom: 5em !important;
+
+		.grid-tutorials {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		.grid-tutorials {
+			grid-template-columns: 440px;
+			justify-content: center;
+		}
+
+		.container-types {
+			font-size: .9em;
+			justify-content: center;
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		width: 100% !important;
+		padding: 0 1em;
+		padding-top: 3em !important;
+		padding-bottom: 3em !important;
+
+		.grid-tutorials {
+			grid-template-columns: 1fr;
+		}
+
+		.container-types {
+			font-size: .8em;
+		}
+	}
+}

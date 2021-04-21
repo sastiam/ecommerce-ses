@@ -1,0 +1,54 @@
+@import "../../../styles/index.scss";
+
+
+$text-color-card : rgba(0,0,0,.5);
+.user-data-info {
+	@include flex(none, stretch);
+	background-color: white;
+	.main-image {
+		display: block;
+		width: 200px;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.body {
+		width: 100%;
+		@include flex(none, none);
+		flex-direction: column;
+		padding: 15px;
+		&__header {
+			.title {
+				font-weight: bold;
+			}
+			.detail-username {
+				@include flex(none);
+				margin: 10px 0;
+				> .text-username {
+					margin-left: 10px;
+					color: $text-color-card;
+					font-size: 12px;
+					font-weight: bold;
+					margin-top: -6px;
+				}
+			}
+			.detail-points {
+				@include flex(none);
+				.row {
+					@include flex(none);
+					margin-right: 20px;
+				}
+				.text {
+					color: $text-color-card;
+					font-weight: bold;
+					font-size: 12px;
+					margin-left: 10px;
+				}
+			}
+		}
+		&__footer {
+			margin-top: auto;
+			text-align: right;
+		}
+	}
+}

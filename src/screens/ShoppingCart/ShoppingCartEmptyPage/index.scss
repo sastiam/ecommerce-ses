@@ -1,0 +1,102 @@
+@import "../../../styles";
+
+.container-message-no-items {
+	width: 75%;
+	margin: 4em auto;
+
+	.title-message {
+		padding: 1em 0;
+		.text {
+			font-size: 1.5em;
+			font-weight: 900;
+		}		
+	}
+
+	.content-message {
+		padding: 1.5em 0;
+		background-color: rgb(245,245,245);
+		@include flex(flex-start);
+
+		.icon {
+			font-size: 3em;
+			padding: 0 .8em;
+			color: #d2d2d2;
+			line-height: 0;
+		}
+
+		.information {
+			width: 100%;
+
+			.title-information .text {
+				font-size: 1.1em;
+				font-weight: bold;				
+			}
+
+			.txt {
+				@include flex(space-between);
+				
+				.p {
+					font-weight: 300;
+				}
+
+				padding-right: 2em;
+			}
+		}
+	}
+
+	@include max-width($media-desktop-medium){
+		.content-message {
+			flex-direction: column;
+			padding: 2em;
+
+			.icon {
+				font-size: 4em;
+				padding: .5em 1em;
+			}
+
+			.title-information {
+				text-align: center;
+				font-size: 1.5em;
+			}
+
+			.information .txt {
+				flex-direction: column;
+				align-items: center;
+				padding: 0 1em;
+
+				.p{
+					margin: 1.5em 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@include max-width($media-desktop-small){
+		width: 85%;
+	}
+
+	@include max-width($media-tablet-medium){
+		width: 90%;
+
+		.content-message {
+			.icon {
+				font-size: 3.2em;
+			}
+			.title-information {
+				font-size: 1.3em;
+			}
+		}
+	}
+
+	@include max-width($media-tablet-small){
+		.content-message{ font-size: .9em; padding: 2em 1em; }
+	}
+
+	@include max-width($media-mobile-big){
+		.title-message {
+			font-size: .9em;
+			text-align: center;
+		}
+	}
+}

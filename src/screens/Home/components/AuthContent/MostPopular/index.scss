@@ -1,0 +1,55 @@
+@import "../../../../../styles";
+
+.most-popular {
+	margin-bottom: 4em;
+	.content {
+		width: 80%;
+		margin: 0 auto;
+
+		.title {
+			padding: 3em 0;
+		}
+
+		.list-courses {
+			min-height: 300px;
+			position: relative;
+
+			.grid-most-popular {
+				display: grid;
+				grid-gap: 15px;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+			}
+
+			@include max-width(1400px){
+				overflow-x: auto;
+				margin: 0 auto;
+				padding: 1em 0;
+
+				.grid-most-popular {
+					grid-template-columns: repeat(6,290px);
+				}
+			}
+
+			@include max-width($media-tablet-big){
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+		}
+
+		@include max-width(680px){
+			width: 85%;
+			.title {
+				padding: 2em 0;
+			}
+		}
+
+		@include max-width(480px){
+			width: 95%;
+			text-align: center;
+			.title {
+				font-size: .95em;
+			}
+		}
+	}
+}

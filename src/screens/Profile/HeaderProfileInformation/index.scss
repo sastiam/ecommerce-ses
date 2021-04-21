@@ -1,0 +1,8 @@
+@import "../HeaderProfileInformation/HeaderProfileBackdrop/index";
+
+.header-profile {
+	margin-bottom: -$height-backdrop / 3;
+	@include max-width($media-tablet-big) {
+		margin-bottom: -$height-backdrop / 1.5;
+	}
+}

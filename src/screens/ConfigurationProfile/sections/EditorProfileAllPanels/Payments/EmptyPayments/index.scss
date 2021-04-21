@@ -1,0 +1,17 @@
+.empty-payment {
+	background-color: lighten($color: rgb(38, 28, 128), $amount: 67);
+	text-align: center;
+	padding: 3em 0;
+
+	&__message {
+		text-align: center;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding: 3em 2em;
+
+		&__message {
+			font-size: .85em;
+		}
+	}
+}

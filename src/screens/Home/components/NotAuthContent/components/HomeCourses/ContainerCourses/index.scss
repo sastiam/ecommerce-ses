@@ -1,0 +1,45 @@
+@import "../../../../../../../styles";
+
+.grid-courses {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3,360px);
+	justify-content: center;
+	column-gap: 15px;
+	padding: 2em 0;
+
+	@include max-width(1100px) {
+		width: 90%;
+		grid-template-columns: repeat(2,330px);
+	}
+
+	@include max-width(800px) {
+		grid-template-columns: repeat(2,350px);
+	}
+
+	@include max-width(650px) {
+		grid-template-columns: repeat(2,310px);
+	}
+
+	@include max-width($media-tablet-big){
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		overflow-x: auto;
+
+		.edit {
+			width: 320px;
+			flex: none;
+			margin-right: 1em;
+
+			&:hover {
+				box-shadow: none;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

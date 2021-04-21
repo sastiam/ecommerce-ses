@@ -1,0 +1,27 @@
+$duration : 200ms;
+
+.dropdown {
+	display: flex;
+	flex-direction: column;
+}
+
+.collapsable-enter {
+	transform: scaleY(0);
+	transform-origin: top;
+}
+
+.collapsable-enter-active {
+	transform: scaleY(1);
+	transition: $duration;
+}
+
+.collapsable-exit {
+	transform: scaleY(1);
+	height: auto;
+}
+
+.collapsable-exit-active {
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: $duration;
+}

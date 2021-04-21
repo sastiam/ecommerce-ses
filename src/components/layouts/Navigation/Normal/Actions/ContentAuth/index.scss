@@ -1,0 +1,35 @@
+@import "../../../../../../styles";
+
+.other-action{
+	height: var(--nav-height);
+	display: flex;
+	align-items: center;
+
+	@include max-width($media-desktop-big){
+		button { font-size: .9em !important; }
+	}
+}
+
+.user-action {
+	width: 80px;
+	height: var(--nav-height);
+	position: relative;
+	@include flex;
+
+	.avatar {
+		width: 40px;
+		height: 40px;
+		line-height: 0;
+		cursor: pointer;
+
+		.image {
+			width: inherit;
+			height: inherit;
+			object-fit: cover;
+		}
+
+		& , .image {
+			border-radius: 50%;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import "../../../../../styles";
+
+.content-lesson-section{
+	width: 100%;
+
+	.lesson-section {
+		width: 80%;
+		margin: 2em auto;
+		display: grid;
+		grid-template-columns: 1fr 450px;
+		grid-gap: 3em;
+
+		.description {
+			font-weight: 300;
+		}
+	}
+	
+	@include max-width($media-desktop-big){
+		.lesson-section {
+			width: 90%;
+		}
+	}
+
+	@include max-width($media-desktop-medium){
+		.lesson-section {
+			grid-template-columns: 1fr 380px;
+		}
+	}
+
+	@include max-width($media-desktop-small){
+		.lesson-section {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		font-size: .9em;
+	}
+}

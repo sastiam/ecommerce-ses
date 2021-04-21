@@ -1,0 +1,56 @@
+.teacher-information {
+	.teacher-data {
+		display: flex;
+		padding-top: .5em;
+		padding-bottom: 2em;
+
+		.image {
+			width: 65px;
+			height: 65px;
+			border-radius: 50%;
+
+			.img{
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				object-fit: cover;
+			}
+		}
+
+		.information {
+			padding-left: 1.5em;
+
+			.name, .course { display: block; }
+			
+			.name {
+				font-size: 17px;
+				font-weight: bold;
+				color: var(--color-black);
+			}
+
+			.course {
+				font-size: .9em;
+				font-weight: 300;
+				color: var(--color-light);
+			}
+		}
+	}
+
+	.teacher-description {
+		padding-bottom: 1em;
+
+		.description {
+			font-weight: 300;
+			color: var(--color-black);
+		}
+	}
+
+	.about-teacher {
+		padding-top: 1em;
+
+		.link {
+			color: var(--color-secondary);
+			font-weight: 900;
+		}
+	}
+}

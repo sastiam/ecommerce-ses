@@ -1,0 +1,39 @@
+@import '../../../../../../styles';
+
+.puntuation {
+	@include flex(flex-start);
+
+	.icons-puntuation {
+		padding-left: 1.5em;
+
+		.icons {
+			display: flex;
+		}
+
+		.text {
+			color: rgb(170,170,170);
+			margin-top: 5px;
+		}
+	}
+}	
+
+.content-button {
+	@include flex;
+	padding: 1.5em 0;
+
+	.button-valorate {
+		width: 250px;
+		color: var(--color-base);
+		background-color: #fff;
+		font-size: 15px;
+		font-weight: 900;
+		padding: .7em;
+		border: 1px solid var(--color-base);
+		transition: .3s;
+
+		&:hover {
+			background-color: var(--color-base);
+			color: #fff;
+		}
+	}	
+}

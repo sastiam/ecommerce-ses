@@ -1,0 +1,68 @@
+@import "../../../../styles";
+@import "../HeaderProfileBackdrop/index";
+
+.user-detail {
+		position: relative;
+		top: $height-backdrop / 2 * -1;
+		max-width: 80%;
+		width: 1125px;
+		margin: auto;
+		.user-row:last-child {
+			width: 100%;
+		}
+		
+		.container-profile-avatar {
+			position: relative;
+			.avatar-upload {
+				position: absolute;
+				right: 10px;
+				bottom: 0;
+			}
+		}
+
+		.detail {
+			padding-left: 3pc;
+			width: 100%;
+			> *[class^="detail"] {
+				margin:1.3pc 0;
+			}
+			&-title {
+				@include min-width($media-tablet-big) {
+					&.withImage {
+						color: white;
+						text-shadow: 0 0 4px black;
+					}
+				}
+			}
+			&-description {
+				color: $text-light;
+			}
+			&-link-explore {
+					text-decoration: none;
+					color: var(--color-base);
+					font-weight: bold;
+			}
+			@include max-width($media-tablet-big) {
+				text-align: center;
+				margin: auto;
+				&-description {
+					flex-direction: column;
+				}
+				&-link-explore {
+					margin-top: 20px;
+				}
+			}
+		}
+
+
+		@include max-width($media-tablet-big) {
+			flex-direction: column;
+		}
+}
+
+.flex {
+	@include flex(none);
+}
+.flex-space {
+	@include flex(space-between);
+}

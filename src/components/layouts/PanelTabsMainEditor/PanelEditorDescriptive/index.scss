@@ -1,0 +1,20 @@
+.editor-panel-card {
+	.message {
+		color: lighten($color: #000000, $amount: 60);
+		margin-bottom: 3em;
+	}
+
+	@media screen and (max-width : 650px) {
+		.row-panel .global-title-responsive span {
+			margin-top: .5em;	
+			font-size: 2.3em !important;
+		}
+	}
+
+	@media screen and (max-width : 440px) {
+		.row-panel .global-title-responsive  span {
+			margin-top: .2em;	
+			font-size: 1.8em !important;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+@import "../../../../../styles";
+
+.container-list-courses {
+	height: 300px;
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgb(200,200,200);
+		border-radius: 10px;
+	}
+
+	@include max-width($media-desktop-medium){
+		height: auto;
+		max-height: 300px;
+	}
+
+	@include max-width($media-tablet-medium){
+		font-size: .9em;
+	}
+}

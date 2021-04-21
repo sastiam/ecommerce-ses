@@ -1,0 +1,44 @@
+@import "../../../../../../styles";
+
+.cardboard-item {
+	padding: 20px 0;
+	.flex {
+		@include flex(none);
+	}
+	.header {
+		.total-item {
+			margin-right: 10px;
+		}
+	}
+	.text {
+		font-size: 1.2em;
+		font-weight: normal;
+		color: var(--color-light);
+	}
+
+	.spacing {
+		> * {
+			margin: 0 5px;
+		}
+	}
+
+	&.center {
+		@include flex();
+		flex-direction: column;
+	}
+
+	@include max-width($media-tablet-medium) {
+		padding-left: 20px;
+		.header {
+			margin-right: auto;
+		}
+		.text {
+			font-size: 14px;
+			width: 90%;
+			margin-right: auto;
+		}
+		.total-item {
+			font-size: 1.6rem;
+		}
+	}
+}

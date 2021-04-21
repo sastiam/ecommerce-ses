@@ -1,0 +1,45 @@
+@import "../../../../../../styles";
+
+.container-filter {
+	width: 100%;
+	border-bottom: 1px solid rgb(230,230,230);
+
+	.container-title-bar {
+		text-align: center;
+		padding: 4.5em 0;
+
+		.title-filter-bar {
+			font-size: 2.5em;
+			color: var(--color-black);
+		}
+	}
+
+	.container-courses {
+		padding: 2em 0;
+		// background-color: rgb(245,245,245);
+	}	
+
+
+	@include max-width($media-tablet-big){
+		.container-courses {
+			padding: 2em 3em;
+		}
+	}
+
+	@include max-width($media-tablet-medium){
+		.container-courses {
+			padding: 2em 2em;
+		}
+
+		.title-main-filter {
+			font-size: 1.8em !important;
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		.title-main-filter {
+			font-size: 1.6em !important;
+			padding: 0 .5em;
+		}
+	}
+}

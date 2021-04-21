@@ -1,0 +1,14 @@
+@import "../../../../styles";
+
+.nav-categories {
+	@include max-width($media-tablet-big) {
+		padding: 0 20px;
+	}
+	&__extra {
+		margin-top: 60px;
+
+		&.small {
+			margin-top: 40px;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+// mixins globales
+@mixin flex($jc: center, $ai: center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+@mixin min-width($min-width) {
+	@media screen and (min-width: $min-width) {
+		@content;
+	}
+}
+
+@mixin max-width($max-width) {
+	@media screen and (max-width: $max-width) {
+		@content;
+	}
+}
+
+@mixin between-width($min-width, $max-width) {
+	@media screen and (max-width: $max-width) and (min-width: $min-width) {
+		@content;
+	}
+}
+
+/** -- VARIABLES -- **/
+
+$course-height-card: 220px;
+$text-light: rgb(199, 199, 199);
+$color-modal: #fff;
+$width-icon-cart: 60px;
+$text-light-smooth: rgb(250, 250, 250);
+
+// BOX SHADOW
+$box-shadow-modal: 0 15px 50px rgba(0, 0, 0, 0.1);
+
+// tamaños para hacer responsive la pagina
+// desktop
+$media-desktop-big: 1280px;
+$media-desktop-medium: 1024px;
+$media-desktop-small: 920px;
+
+// tablet
+$media-tablet-big: 750px;
+$media-tablet-medium: 650px;
+$media-tablet-small: 500px;
+
+// mobile
+$media-mobile-big: 480px;
+$media-mobile-small: 320px;
+
+:export {
+	mediaDesktopBig: $media-desktop-big;
+	mediaDesktopMedium: $media-desktop-medium;
+	mediaDesktopSmall: $media-desktop-small;
+	mediaTabletBig: $media-tablet-big;
+	mediaTabletMedium: $media-tablet-medium;
+	mediaTableSmall: $media-tablet-small;
+	mediaMobileBig: $media-mobile-big;
+	mediaMobileSmall: $media-mobile-small;
+}

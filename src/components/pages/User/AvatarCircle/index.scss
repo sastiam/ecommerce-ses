@@ -1,0 +1,26 @@
+$featured : isFeatured;
+$border-width : 3px;
+
+.container-avatar {
+
+	.image-avatar {
+		border-radius: 100%;
+		object-fit: cover;
+		width: 30px;
+		height: 30px;
+		background: rgb(240, 240, 240);
+		-webkit-user-drag: none;
+	}	
+
+	.#{$featured} {
+		padding: 4px;
+		border : 5px solid rgb(240, 240, 240);
+		border-right-color : #0F56BF;
+	}
+
+	.#{$featured}Solid {
+		$border-width : 2px;	
+		padding: 4px;
+		border: 5px solid var(--color-base);
+	}
+}

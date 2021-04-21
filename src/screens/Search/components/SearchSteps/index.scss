@@ -1,0 +1,17 @@
+@import "styles/index.scss";
+
+.search-steps {
+	margin: auto;
+	width: 85%;
+	.steps {
+		color: gray;
+		font-size: 12px;
+	}
+	@include max-width($media-desktop-small) {
+		margin:2em auto;
+		width: 95%;
+	}
+	@include max-width($media-mobile-big) {
+		margin: 1em auto;
+	}
+}

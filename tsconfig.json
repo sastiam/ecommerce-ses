@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "es5",
+    "lib": [
+      "dom",
+			"dom.iterable",
+			"ES2020",
+      "esnext"
+		],
+		"types": ["jest","cypress"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+		"jsx": "react",
+		"noImplicitAny": false
+  },
+  "include": [
+		"src/**/*",
+		"**/*.*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

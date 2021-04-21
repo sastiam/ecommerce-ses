@@ -1,0 +1,31 @@
+.icon-reaction{
+	line-height: 0;
+	display: flex;
+	align-items: center;
+	font-size: 1.2em;
+	cursor: pointer;
+	color: var(--color-light);
+
+	.amount {
+		line-height: normal;
+		font-size: 15px;
+		padding-left: 3px;
+	}
+
+	&.spacing {
+		margin-left: 1em;
+	}
+
+	&:hover {
+		color: var(--color-secondary);
+	}
+
+	&.active {
+		color: var(--color-secondary);
+	}
+
+	&.lock {
+		cursor: initial;
+		color: var(--color-light);
+	}
+}

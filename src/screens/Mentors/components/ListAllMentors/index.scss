@@ -1,0 +1,28 @@
+@import "../../../../styles";
+
+.container-mentors {
+	.grid-all-mentors {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 1.5em;
+	}
+
+	@include max-width($media-desktop-big){
+		width: 85% !important;
+	}
+
+	@include max-width($media-desktop-medium){
+		width: 90% !important;
+		.grid-all-mentors {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		width: 80% !important;
+		.grid-all-mentors {
+			grid-template-columns: 1fr;
+		}
+	}
+}

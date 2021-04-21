@@ -1,0 +1,57 @@
+@import "../../../../styles";
+
+.card-information-offert {
+	width: 100%;
+
+	.card-icon {
+		padding: 0 .5em;
+		padding-bottom: .5em;
+		color: var(--color-secondary);
+
+		svg:hover{
+			transform: scale(1.1);
+		}
+	}
+
+	.content-card {
+		.card-title {
+			font-weight: 900;
+			color: var(--color-black);
+			font-size: 1.4em;
+			margin-bottom: 5px;
+		}
+
+		.card-information {
+			width: 100%;
+			color: var(--color-dark);
+			font-weight: 300;
+			font-size: .95em;
+			margin-top: 10px;
+			line-height: 1.4em;
+		}
+	}
+
+	@include max-width($media-desktop-big){
+		text-align: center;
+
+		.content-card .card-information {
+			width: 70%;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		.content-card .card-information{
+			/*display: none;*/
+		}
+	}
+
+	&.main {
+		@include max-width($media-mobile-big){
+			.content-card .card-information{
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+@import "../../../../../../styles";
+
+.card-information-course {
+	height: auto;
+	box-shadow: $box-shadow-modal;
+	padding: 2em;
+
+	.price , .real-price {
+		color: var(--color-price-card);
+		font-weight: 900;
+	}
+
+	.price {
+		font-size: 1em;
+		&.text {
+			font-weight: 600;
+		}
+	}
+
+	.real-price {
+		font-size: 2.2em;
+		padding-left: 10px;
+	}
+
+	.price-detail {
+		.price-information {
+			padding: 10px 0;
+			border-bottom: 1px solid rgb(230,230,230);
+			@include flex(space-between);
+			color: var(--color-base-light);
+
+			.title {
+				font-weight: 300;
+			}	
+			
+			.data {
+				font-weight: bold;
+				&.tached {
+					text-decoration: line-through;
+				}
+			}
+
+			&.light {
+				color: var(--color-light);
+			}
+		}
+	}
+
+	.container-action-buttons {
+		display: grid;
+		grid-gap: 5px;
+	}
+}

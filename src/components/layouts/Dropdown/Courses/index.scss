@@ -1,0 +1,49 @@
+@import "../../../../styles";
+
+.dropdown-courses {
+	margin: 0 var(--margin-option);
+
+	.title-zone {
+		cursor: pointer;
+
+		.text {
+			@include flex;
+			line-height: 0;
+
+			.title , .icon {
+				color: var(--color-text);
+			}
+
+			.title {
+				font-size: 15px;
+				line-height: normal;
+				font-weight: var(--font-weight);
+			}
+	
+			.icon {
+				font-size: 2em ;
+			}
+
+			&:hover {
+				.title, .icon { 
+					color: var(--color-text-hover); 
+				}
+			}
+		}
+	}
+
+	.list-zone {
+		--top: calc(var(--nav-height) + 10px);
+
+		position: absolute;
+		top: var(--top);
+		transition: .3s;
+		z-index: 1;
+
+		&.hide {
+			opacity: 0;
+			visibility: hidden;
+			top: calc(var(--top) - 15px);
+		}
+	}
+} 

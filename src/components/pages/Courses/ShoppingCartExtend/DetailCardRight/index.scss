@@ -1,0 +1,55 @@
+@import "../../../../../styles";
+
+.detail-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.2em 0;
+	border-bottom: 1px solid rgb(230,230,230);
+	font-size: 14px;
+
+	.text {
+		color: var(--color-black);
+	}
+
+	.price {
+		font-weight: 900;
+		
+		&.total{
+			font-size: 20px;
+			color: var(--color-price-card);
+		}
+	}
+
+	.link {
+		display: block;
+		color: var(--color-secondary);
+		@include flex;
+		.text-link{ 
+			padding-right: .5em; 
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&.last {
+		border: none;
+	}
+
+	&.center {
+		@include flex;
+	}
+	
+	@include max-width($media-tablet-big){
+		font-size: .9em;
+	}
+
+	@include max-width($media-tablet-medium){
+		font-size: .8em;
+	}
+
+	@include max-width($media-mobile-small){
+		font-size: .7em;
+	}
+}

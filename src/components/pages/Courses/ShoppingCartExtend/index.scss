@@ -1,0 +1,83 @@
+@import "../../../../styles";
+
+.shopping-cart-extend {
+	width: 85% !important;
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 360px;
+	grid-gap: 3em;
+	background: #fff;
+
+	.head-courses {
+		display: grid;
+		grid-gap: 8px;
+	}
+
+	.row-prices {
+		.card-detail {
+			padding: 2em;
+			background-color: rgb(245,245,245);
+		}
+	}
+
+	.icon-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 1.5em;
+		color: var(--color-light);
+		cursor: pointer;
+	}
+
+	&.modal {
+		min-width: 1050px;
+		max-width: 1050px;
+	}
+
+	@include max-width($media-desktop-medium){
+		display: block;
+		grid-template-columns: none;
+
+		.row-courses {
+			margin-bottom: 3em;
+		}
+
+		&.modal {
+			width: 100% !important;
+			height: 100vh;
+			overflow: auto;
+			min-width: auto;
+			max-width: auto;
+
+			padding-left: 2em !important;
+			padding-right: 2em !important;
+			padding-bottom: 0;
+
+			.row-courses {
+				margin-bottom: 0;
+			}
+
+			.row-prices {
+				margin-top: 2em;
+			}
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	@include max-width($media-mobile-big){
+		width: 90% !important;
+
+		&.modal {
+			padding-left: 1em !important;
+			padding-right: 1em !important;	
+		}
+	}
+}

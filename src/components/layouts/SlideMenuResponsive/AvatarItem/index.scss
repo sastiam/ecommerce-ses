@@ -1,0 +1,42 @@
+.avatar-item-slide {
+	--size : 60px;
+	
+	width: 100%;
+	padding: 1.5em 0;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
+	border-bottom: 1px solid rgb(240,240,240);
+
+	.image {
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		line-height: 0;
+
+		.profileImage {
+			width: inherit;
+			height: inherit;
+			border-radius: inherit;
+			object-fit: cover;
+		}
+	}
+
+	.information {
+		height: max-content;
+		display: flex;
+		justify-self: center;
+		flex-direction: column;
+		padding-left: 1em;
+
+		.username {
+			font-weight: 500;
+		}
+
+		.link {
+			color: var(--color-secondary);
+			font-size: .8em;
+			font-weight: 500;
+		}
+	}
+}

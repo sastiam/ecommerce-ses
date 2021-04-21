@@ -1,0 +1,21 @@
+@import "../../styles";
+
+.responsive {
+	min-width: 500px;
+
+	@include max-width($media-desktop-small){
+		padding-top: 1em !important;
+		padding-bottom: 1em !important;
+	}
+
+	@include max-width($media-tablet-medium){
+		width: 90% !important;
+		min-width: 90%;
+	}
+}
+
+@include max-width($media-tablet-medium){
+	.responsive-related {
+		padding: 2em 0 !important;
+	}
+}

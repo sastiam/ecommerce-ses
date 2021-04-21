@@ -1,0 +1,41 @@
+@import "../../../../../styles";
+
+.greet-banner {
+	background-color: $text-light-smooth;
+	margin: auto;
+	padding: 4em 0 7em 0;
+	@include max-width($media-desktop-medium) {
+		padding: 2em 0 3em;
+	}
+}
+
+.row-b {
+	margin: auto;
+	width: 80%;
+	@include max-width($media-tablet-small) {
+		width: 95%;
+	}
+	.col-body-b {
+		display: flex;
+		align-items: stretch;
+		height: 400px;
+
+		> *:first-child {
+			width: 100%;
+			margin-right: 1em;
+		}
+		> *:last-child {
+			flex: none;
+			width: 400px;
+		}
+		@include max-width($media-desktop-medium) {
+				display: block;
+				height: auto;
+				> *:last-child {
+					width: 100%;
+					margin-top: 2em;
+				}
+		}
+	}
+}
+

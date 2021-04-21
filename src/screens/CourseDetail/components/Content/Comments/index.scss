@@ -1,0 +1,46 @@
+@import "../../../../../styles";
+
+.comments-course-detail{
+	animation: initMain .2s linear backwards;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 450px;
+
+	.add {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.button {
+			background: none;
+			color: var(--color-secondary);
+			font-weight: 900;
+			display: flex;
+			align-items: center;
+		
+			.icon{
+				padding-right: 10px;
+				font-size: 1.1em;
+				line-height: 0;
+			}
+		}		
+	}
+
+	@include max-width($media-desktop-big){
+		grid-template-columns: 1fr 350px;
+	}
+
+	@include max-width($media-desktop-small){
+		grid-template-columns: 1fr;
+	}
+
+	@include max-width($media-desktop-big){
+		width: 90% !important;
+	}
+
+	@include max-width($media-tablet-big){
+		font-size: .9em;
+	}
+}

@@ -1,0 +1,43 @@
+@import "../../../../styles";
+
+.cart-menu {
+	--top-general : 16px;
+	--top : calc(var(--nav-height) + var(--top-general));
+
+	width: var(--menu-cart-width);
+	height: var(--menu-cart-height);
+	position: absolute;
+	top: var(--top);
+	right: 0;
+	z-index: 4;
+	padding: 0 1.5em;
+	transition: .2s;
+	background-color: $color-modal;
+	box-shadow: $box-shadow-modal;
+
+	.cart-triangle {
+		width: $width-icon-cart;
+		@include flex;
+		position: absolute;
+		top: calc(var(--top-general) * -1);
+		right: 10px;
+
+		.triangle {
+			width: 0;
+			height: 0;
+			border-bottom: 16px solid $color-modal;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+		top: calc(var(--top) - 16px);
+	}
+
+	&.no-item {
+		height: calc(var(--menu-cart-height) - 200px);
+	}
+}

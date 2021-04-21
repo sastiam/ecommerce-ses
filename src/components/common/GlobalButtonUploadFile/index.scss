@@ -1,0 +1,16 @@
+.change-file {
+	$size: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: $size;
+	height: $size;
+	border-radius: 100%;
+	background: #0F56BF;
+	color: white;
+	cursor: pointer;
+
+	.file-input {
+		display: none;
+	}
+}

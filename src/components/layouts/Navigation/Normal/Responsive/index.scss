@@ -1,0 +1,51 @@
+@import "../../../../../styles";
+
+.items {
+	line-height: 0;
+	.icons {
+		width: max-content;
+		height: max-content;
+		margin: auto;
+		position: absolute;	
+		top: 0;
+		bottom: 0;
+		line-height: 0;
+
+		&.left {
+			left: 0;
+		}
+
+		&.right {
+			right: 0;
+		}
+
+		.option {
+			color: var(--color-text);
+			font-size: 1.4em;
+			cursor: pointer;
+			transition: .3s;
+			line-height: 0;
+
+			&.spacing {
+				margin-left: 2em;
+			}
+
+			&:first-child {
+				padding-right: 1em;
+			}
+		}
+	}
+
+	@include max-width($media-tablet-medium){
+		font-size: .9em;
+
+		.option.spacing {
+		margin-left: 1.5em !important;
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		font-size: .85em;
+	}
+}
+

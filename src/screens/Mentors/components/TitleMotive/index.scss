@@ -1,0 +1,35 @@
+@import "../../../../styles/index.scss";
+
+.title-motive {
+	@include flex();
+	flex-direction: column;
+	margin-top: 5em;
+	margin-bottom: 5em;
+
+	.motive-message {
+		text-align: center;
+		margin: auto;
+		width: 60%;
+		line-height: 1.4em;
+		font-size: 1.1em;
+		font-weight: 300;
+	}
+
+	@include max-width($media-tablet-medium) {
+		.title {
+			font-size: 2.5em;
+		}
+	}
+	@include max-width($media-tablet-small) {
+		.title {
+			font-size: 2em;
+		}
+		.motive-message {
+			font-size: 1em;
+		}
+	}
+	@include max-width($media-mobile-big) {
+		margin-top: 2em;
+		padding: 0 10px;
+	}
+}

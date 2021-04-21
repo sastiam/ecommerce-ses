@@ -1,0 +1,47 @@
+@import "../../../../styles";
+
+.recommendation {
+	@include flex();
+	flex-direction: column;
+	align-items: stretch;
+
+	.r-header {
+		margin-bottom: 20px;
+	}
+	.r-body {
+		height: 100%;
+		overflow-y: auto;
+
+		&.horizontal {
+			width: 100vh;
+			display: flex;
+			height: auto;
+			.recommendation-card {
+				width: 300px;
+			}
+			
+			@include max-width($media-tablet-big - 100px) {
+				width: 100%;
+			}
+			> * {
+				flex: none;
+				margin-right: 1em;
+			}
+			&::-webkit-scrollbar {
+				height: 4px;
+			}
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 4px;
+		}
+		&:hover::-webkit-scrollbar-thumb {
+			background: lighten($color: #000000, $amount: 70);
+		}
+	}
+}
+
+

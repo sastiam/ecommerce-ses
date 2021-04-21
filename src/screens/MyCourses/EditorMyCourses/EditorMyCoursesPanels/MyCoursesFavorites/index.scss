@@ -1,0 +1,68 @@
+@import "../../../../../styles/index.scss";
+
+.total-favorites {
+	color: gray;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 1em 0;
+	font-size: 15px;
+}
+
+.grid {
+	display: grid;
+	gap: 2em;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	@include between-width($media-tablet-big,$media-desktop-small + 100px) {
+		grid-template-columns:1fr;
+	}
+	@include max-width($media-tablet-big) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.favorite-card {
+	width: auto;
+	margin-bottom: 3em;
+	.row {
+		display: flex;
+		> :last-child {
+			padding: 0 13px;
+		}
+	}
+
+	&__image {
+		width: 70px;
+		height: 70px;
+		background-color: rgba($color: #000000, $alpha: 0.06);
+		object-fit: cover;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 16px;
+		cursor: pointer;
+		color: var(--color-black);
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		@include min-width($media-desktop-small) {
+			width: 150px;
+		}
+	}
+	&__author {
+		color: gray;
+		font-size: 12px;
+		line-height: 25px;
+	}
+	&__punctuation {
+		> * {
+			margin-right: 2px;
+		}
+	}
+}
+@include max-width($media-tablet-big) {
+	.favorite-card {
+		width: 100%;
+		.row {
+			width: 100%;
+		}
+	}
+}

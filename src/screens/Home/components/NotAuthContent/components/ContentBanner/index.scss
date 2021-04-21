@@ -1,0 +1,79 @@
+@import "../../../../../../styles";
+
+.content-banner {
+	width: 100%;
+	padding: 0 2em;
+	line-height: 0;
+	display: grid;
+	grid-gap: 2.5em;
+
+	.central-title{
+		width: 500px;
+		height: auto;
+		display: grid;
+		grid-gap: 15px;
+
+		.title , .message { 
+			color: #fff;
+			line-height: normal; 
+		}
+
+		.title {
+			color: #fff;
+			font-size: 3.6em;
+			line-height: 1.1em;
+			font-weight: 900;
+			font-family: 'Roboto' , sans-serif;
+		}
+
+		.message {
+			font-size: 1.2em;
+		}
+	}
+
+	.content-input{ width: 550px; }
+
+	@include max-width($media-desktop-medium){
+		.central-title {
+			width: 100%;
+			text-align: center;
+
+			.title {
+				font-size: 2.8em;
+			}
+
+			.message {
+				font-size: 1.1em;
+			}
+		}
+
+		.content-input { width: 100%; }
+	}
+
+	@include max-width($media-tablet-big){
+		grid-gap: 1.5em;
+		padding: 0 1em;
+
+		.central-title {
+			.title {
+				font-size: 2.3em;
+			}
+
+			.message {
+				font-size: 1em;
+			}
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		padding: 0 .5em;
+		.central-title {
+			.title {
+				font-size: 1.8em;
+			}
+			.message {
+				font-size: .9em;
+			}
+		}
+	}
+}

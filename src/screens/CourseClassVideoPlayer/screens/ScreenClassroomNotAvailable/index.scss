@@ -1,0 +1,41 @@
+@import "styles/index.scss";
+
+.classroom {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background: black;
+	@include flex(center,center);
+	flex-direction: column;
+	&__image {
+		width: 340px;	
+		-webkit-user-drag: none;
+		@include max-width($media-desktop-small) {
+			margin: 3em;
+			width: 30%;
+		}
+		@include max-width($media-tablet-big) {
+			width: 70%;
+		}
+		@include max-width($media-mobile-big) {
+			width: 60%;
+			margin: 2em;
+		}
+	}
+	&__title {
+		@include max-width($media-desktop-small) {
+			display: none !important;
+		}
+		margin-bottom: 50px;
+		cursor: default;
+	}
+	&__message {
+		text-align: center;
+		color: gray;
+		margin: 20px 0 80px;
+		cursor: default;
+	}
+	&__button {
+		text-align: center;
+	}
+}

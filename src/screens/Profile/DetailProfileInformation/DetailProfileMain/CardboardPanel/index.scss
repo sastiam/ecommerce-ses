@@ -1,0 +1,10 @@
+@import "../../../../../styles";
+
+.flex-space {
+	@include flex(space-between);
+}
+
+.card-panel {
+	padding : 1.2em;
+	background: $text-light-smooth;
+}

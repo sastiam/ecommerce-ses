@@ -1,0 +1,66 @@
+@import "../../../../styles";
+
+.information-offert {
+	.grid-offert {
+		display: grid;
+		grid-template-columns: repeat(4,280px);
+		justify-content: center;
+		column-gap: 3.5em;
+		row-gap: 4em;
+	}
+
+	@include max-width($media-desktop-big){
+		.grid-offert{
+			grid-template-columns: repeat(3,280px);
+		}
+
+		.responsive {
+			width: 70% !important;
+		}
+	}
+
+	@include max-width($media-desktop-small){
+		.grid-offert {
+			grid-template-columns: repeat(2,280px);
+			row-gap: 2em;
+		}
+	}
+
+	@include max-width($media-tablet-big){
+		margin-bottom: 6em;
+
+		.responsive {
+			width: 80% !important;
+			font-size: .7em;
+		}
+		
+		.grid-offert {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.container-card {
+			padding: 3em;
+		}
+	}
+
+	@include max-width($media-mobile-big){
+		.container-card {
+			padding: 2em;
+		}
+
+		.grid-offert {
+			grid-template-columns: 1fr;
+
+			.content-card {
+				width: 250px;
+				margin: 0 auto;
+				margin-top: 1em;
+			}
+
+			.card-title {
+				font-size: 1.2em !important;
+				font-weight: 600 !important;
+			}
+		}
+	}
+}

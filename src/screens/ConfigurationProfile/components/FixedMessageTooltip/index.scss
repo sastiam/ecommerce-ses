@@ -1,0 +1,38 @@
+.fixed-message-tooltip {
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06);
+	padding: 15px 10px;
+	background-color: white;
+	position: fixed;
+	top: 80px;
+	right: 60px;
+	width: 300px;
+	border-radius: 10px;
+	z-index: 1000;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+@mixin enter {
+	opacity: 1;
+	transform: translateX(0%);
+	transition: 0.2s;
+}
+@mixin exit {
+	opacity: 0;
+	transform: translateX(100%);
+}
+
+.fixed-message {
+	&-enter {
+		@include exit();
+	}
+	&-enter-active {
+		@include enter();
+	}
+	&-exit {
+		@include enter();
+	}
+	&-exit-active {
+		@include exit();
+	}
+}

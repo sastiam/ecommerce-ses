@@ -1,0 +1,30 @@
+.file-card {
+	padding: 0 2em;
+	
+	.icon {
+		font-size: 1.8em;
+	}
+
+	.content {
+		font-weight: 300;
+		font-size: 16px;
+		padding-right: 1em;
+	}
+}
+
+.button-link-file {
+	width: 180px;
+	background-color: var(--color-base);
+	color: #fff;
+	padding: .5em;
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 20px;
+	transition: .3s;
+
+	&:hover {
+		background-color: var(--color-secondary);
+	}
+}

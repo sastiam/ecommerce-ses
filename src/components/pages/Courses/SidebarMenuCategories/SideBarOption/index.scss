@@ -1,0 +1,49 @@
+.side-bar-menu-option {
+	transition: background 0.3s;
+	color: #4B4B4B;
+	font-size: 16px;
+	font-weight: 300;
+	display: block;
+	padding: 8px 0;
+	margin-bottom: 10px;
+
+	&.selected {
+		position: relative;
+		color: black;
+		font-weight: bold;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 60px;
+			height: 3px;
+			background-color: var(--color-base);
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	&.small {
+		font-size: 14px;
+		color: #4B4B4B;
+		font-weight: 300;
+		margin-bottom : 0;
+
+		&::after {
+			content: initial;
+		}
+	}
+
+	&.weight {
+		font-weight: bold;
+		color:var(--color-dark);
+	}
+
+	&:hover, &.weight:hover {
+		color: var(--color-base);
+	}
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}

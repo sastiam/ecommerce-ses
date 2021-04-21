@@ -1,0 +1,47 @@
+.input-container-auth {
+	width: inherit;
+	background-color: #fff;
+
+	.input-auth {
+		width: inherit;
+		display: grid;
+		grid-template-columns: 1fr;
+		border: 1px solid rgb(230,230,230);
+		border-radius: 10px;
+		padding: 10px 1em;
+
+		.text {
+			font-size: .8em;
+			font-weight: bold;
+			color: var(--color-light)
+		}
+		
+		.input {
+			padding: 5px 0;
+			background: #fff;
+		}
+
+		&.required {
+			border-color: var(--color-price-card);
+		}
+
+		&.focus {
+			border-color: var(--color-base);
+		}
+	}	
+
+	.required-message {
+		color: var(--color-price-card);
+		font-size: .85em;
+		padding: 0 2px;
+	}
+
+	@media screen and (max-width : 480px){
+		font-size : .8em;
+
+		.input-auth {
+			padding: 6px inherit;
+		}
+	}
+}
+

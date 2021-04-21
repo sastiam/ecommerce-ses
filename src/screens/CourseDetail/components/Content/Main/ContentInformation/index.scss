@@ -1,0 +1,20 @@
+.content-information {
+	width: var(--width);
+	background: #fff;
+	padding: 2em;
+	margin-bottom: 2em !important;
+
+	.information-description {
+		font-weight: 300;
+		line-height: 1.7em;
+	}
+
+	.item-option {
+		font-weight: 300;
+		padding-top: .5em;
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+}

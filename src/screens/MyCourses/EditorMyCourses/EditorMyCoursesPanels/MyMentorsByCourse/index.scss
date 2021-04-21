@@ -1,0 +1,18 @@
+@import "../../../../../styles/index.scss";
+
+.mentors-personal {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
+
+	@include max-width($media-desktop-big) {
+		gap: 1em;
+	}
+	@include max-width($media-desktop-small) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include max-width($media-tablet-small) {
+		grid-template-columns: 1fr;
+	}
+	
+}

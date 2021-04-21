@@ -1,0 +1,72 @@
+@import "../../../../../styles/index.scss";
+
+.enrolled {
+	padding: 10px 0;
+	margin-top: 4em;
+	&-title {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		@include max-width($media-mobile-big) {
+			padding: 0 20px;
+			font-size: 1.2em;
+		}
+	}
+
+	&-courses {
+		@include flex(none, none);
+		.row-courses {
+			&:first-child {
+				width: 300px;
+			}
+
+			&.row-scrollable {
+				width: 100%;
+				margin-left: 25px;
+				overflow-y: auto;
+				height: 400px;
+				&::-webkit-scrollbar {
+					width: 6px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background-color: $text-light;
+					border-radius: 100px;
+				}
+				> * {
+					margin-bottom: 2pc;
+				}
+			}
+		}
+
+		@include max-width($media-desktop-big) {
+			flex-direction: column;
+			.row-courses {
+				&:first-child{
+					width: 100%;
+					margin-bottom: 50px;
+					.main-image {
+						width: 100% !important;
+					}
+				}
+				&:last-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		@include max-width($media-tablet-big) {
+			.row-scrollable {
+				display: none;
+			}
+		}
+
+		@include max-width($media-mobile-big) {
+			padding: 0 20px;
+		}
+
+		@include max-width($media-mobile-small) {
+			.row-courses:first-child {
+				width: auto;
+			}
+		}
+	}
+}
