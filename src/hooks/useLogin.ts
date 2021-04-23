@@ -5,6 +5,10 @@ import { TokenKey } from "application/services/config";
 import TokenGenerate from "application/services/Token/TokenGenerate";
 import UserAuthenticationRepository from "application/requests/UserAuthenticationRepository";
 
+import {useQuerySearch} from "hooks/useQuery";
+import { navigate } from '@reach/router';
+
+
 export default () => {
 	const [ isLoading , setLoading ] = useState<boolean>(false);
 	const [ username , setUsername ] = useState<string>("");
@@ -12,6 +16,9 @@ export default () => {
 
 	const changeUsername = (value : string) => setUsername(() => value);
 	const changePassword = (value : string) => setPassword(() => value);
+
+	const urlRedirect = useQuerySearch("redir");
+	// console.log(useQuerySearch("redir"));
 
 	const onSubmit = async (ev : FormEvent<HTMLFormElement>) => {
 		ev.preventDefault();
@@ -43,6 +50,13 @@ export default () => {
 
 		const token = new TokenGenerate(jwt, TokenKey).__invoke({ email : formatedEmail });
 		localStorage.setItem('Token', token);
+		
+		
+		if(urlRedirect){
+			navigate(urlRedirect);
+			window.location.reload();
+			// window.location.href = urlRedirect; 
+		}
 		window.location.reload();
 	}
 

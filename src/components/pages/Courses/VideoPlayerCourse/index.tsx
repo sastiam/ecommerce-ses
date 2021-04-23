@@ -1,4 +1,4 @@
-import React, { memo, FC } from "react";
+import React, { memo, FC, useContext } from "react";
 import classnames from "classnames";
 
 import * as Styled from './styles';
@@ -7,6 +7,8 @@ import ProgressBar from "./components/ProgressBar";
 import PlayControl from "./components/PlayControl";
 import OptionList from "./components/OptionList";
 import useVideoPlayer from "./hooks/useVideoPlayer";
+import { AuthContext } from "context/Auth";
+import { navigate, useLocation } from "@reach/router";
 
 interface IProps {
 	src : string;
@@ -19,11 +21,26 @@ const VideoPlayerCourse : FC<IProps> = ({ src , autoplay,  imagePreview , onVide
 	const video = useVideoPlayer(src, onVideoEnd);
 	const { refVideo , duration , currentTime, playing , muted , barPercentage , bufferedPercentage, pause } = video;
 
+	//context
+	const { userAuth } = useContext(AuthContext);
+
+	const {pathname} = useLocation();
 	//Dynamic Styles
 	const classVideoControls = classnames({ init : playing });
 	const classControlsContainer = classnames({ hide : !playing });
 
 	if(!src) return <></>;
+
+	const onClickPlayControl = () => {
+		if(!userAuth){
+			if(!pathname){
+				navigate('/login')
+				return;
+			}
+			navigate(`/login?redir=${pathname}`);
+			return;
+		}
+	};
 
 	return <Styled.Container>
 		<Styled.Video
@@ -56,7 +73,8 @@ const VideoPlayerCourse : FC<IProps> = ({ src , autoplay,  imagePreview , onVide
 				/>
 			</Styled.ControlsContainer>
 		</Styled.VideoControls>
-		{ !playing && <PlayControl onClick={video.OnClickPlay} /> }
+		{ !playing && <PlayControl onClick={userAuth ? video.OnClickPlay : onClickPlayControl}/> }
+		{/* { !playing && <PlayControl onClick={video.OnClickPlay} /> } */}
 	</Styled.Container>
 }
 

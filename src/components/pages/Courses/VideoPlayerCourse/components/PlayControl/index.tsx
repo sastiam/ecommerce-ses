@@ -8,7 +8,9 @@ interface IProps {
 	onClick?() : void;
 }
 
+
 const PlayControl : FC<IProps> = ({ onClick }) => (
+
 	<Styled.Container>
 		<Control fontSize="8em" onClick={onClick} >
 			<FiPlayCircle />

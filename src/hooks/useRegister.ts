@@ -60,6 +60,7 @@ export default () => {
 				const token = new TokenGenerate(jwt, TokenKey).__invoke({ email : emailF });
 				localStorage.setItem('Token', token);
 				window.location.reload();
+				
 			}
 		}catch(error){
 			console.log(error);
